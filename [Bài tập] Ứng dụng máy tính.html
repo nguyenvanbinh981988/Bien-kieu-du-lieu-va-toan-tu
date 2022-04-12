@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caculator</title>
+</head>
+<body>
+<h1>Caculator</h1>
+<input id="a" type="number" value="rd"> <input id="b" type="number" value="rd"><br><br>
+<button style="background-color: orange" type="button" onclick="addition(); ">Addition(+)</button>
+<button style="background-color: orange" type="button" onclick="Subtraction(); ">Subtraction(-)</button>
+<button style="background-color: orange" type="button" onclick="Multiplication(); ">Multiplication(*)</button>
+<button style="background-color: orange" type="button" onclick="Division(); ">Division(/)</button>
+
+<script>
+    function addition(){
+        let inputX1 = document.getElementById("a").value;
+        let inputY1 = document.getElementById("b").value;
+        let x1 = parseInt(inputX1);
+        let y1 = parseInt(inputY1);
+        alert(x1 + y1)
+    }
+    function Subtraction(){
+        let inputX2 = document.getElementById("a").value;
+        let inputY2 = document.getElementById("b").value;
+        let x2 = parseInt(inputX2);
+        let y2 = parseInt(inputY2);
+        alert(x2 - y2)
+    }
+    function Multiplication(){
+        let inputX3 = document.getElementById("a").value;
+        let inputY3 = document.getElementById("b").value;
+        let x3 = parseInt(inputX3);
+        let y3 = parseInt(inputY3);
+        alert(x3 * y3)
+    }
+    function Division(){
+        let inputX4 = document.getElementById("a").value;
+        let inputY4 = document.getElementById("b").value;
+        let x4 = parseInt(inputX4);
+        let y4 = parseInt(inputY4);
+        alert(x4 - y4)
+    }
+
+
+</script>
+</body>
+</html>
