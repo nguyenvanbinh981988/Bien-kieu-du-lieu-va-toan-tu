@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyen doi tien te</title>
+    <style>
+        th:nth-child(2){
+            width: 130px;
+            text-align: center;
+        }
+        th:nth-child(3){
+            width: 130px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+<h2>Chuyển đổi tiền tệ</h2>
+<table>
+    <tr>
+        <th>Amount</th>
+        <th>From Curency</th>
+        <th>To Curency</th>
+    </tr>
+    <tr>
+        <td id="SoTien"><input type="Number" value=""></td>
+        <td>
+            <select id="LoaiTienGoc" style="width: 120px">
+            <option value="1">VietNam</option>
+            <option value="23000">USD</option>
+        </select>
+        </td>
+        <td>
+            <select itemid="LoaiTienDoi" style="width: 120px">
+                <option value="1">VietNam</option>
+                <option value="23000">USD</option>
+            </select>
+        </td>
+        <td>
+            <button style="background-color: blue" type="button" onclick="Showresult(); ">Convert</button>
+        </td>
+    </tr>
+    <tr>
+        <td id="reesult"></td>
+    </tr>
+
+</table>
+
+<script>
+    let d = 0;
+    function Showresult(){
+        let a= Number(document.getElementById("SoTien").value);
+        let b= Number(document.getElementById("LoaiTienGoc").value);
+        let c= Number(document.getElementById("LoaiTienDoi").value);
+            d = a * (b/c);
+            console.log("Result: " + d +"Vnd");
+        }
+
+</script>
+</body>
+</html>
