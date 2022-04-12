@@ -24,39 +24,42 @@
         <th>To Curency</th>
     </tr>
     <tr>
-        <td id="SoTien"><input type="Number" value=""></td>
+        <td><input id="a" type="Number" value="rd"></td>
         <td>
-            <select id="LoaiTienGoc" style="width: 120px">
+            <select id="b" style="width: 120px">
             <option value="1">VietNam</option>
             <option value="23000">USD</option>
         </select>
         </td>
         <td>
-            <select itemid="LoaiTienDoi" style="width: 120px">
+            <select id="c" style="width: 120px">
                 <option value="1">VietNam</option>
                 <option value="23000">USD</option>
             </select>
         </td>
         <td>
-            <button style="background-color: blue" type="button" onclick="Showresult(); ">Convert</button>
+            <button style="background-color: blue" type="button" onclick="demo(); ">Convert</button>
         </td>
     </tr>
     <tr>
-        <td id="reesult"></td>
+        <td> <div id="demo1"></div></td>
     </tr>
 
 </table>
 
 <script>
-    let d = 0;
-    function Showresult(){
-        let a= Number(document.getElementById("SoTien").value);
-        let b= Number(document.getElementById("LoaiTienGoc").value);
-        let c= Number(document.getElementById("LoaiTienDoi").value);
-            d = a * (b/c);
-            console.log("Result: " + d +"Vnd");
-        }
+    function demo(){
+       let inputCoin = document.getElementById("a").value;
+        let inputtienGoc = document.getElementById("b").value;
+        let inputtienDoi = document.getElementById("c").value;
+        let coin = parseInt(inputCoin);
+        let tienGoc = parseInt(inputtienGoc);
+        let tienDoi = parseInt(inputtienDoi);
 
+        tongTien = (tienGoc / tienDoi) * coin;
+            document.getElementById('demo1').innerHTML = "Result: " + tongTien + " VND";
+
+    }
 </script>
 </body>
 </html>
